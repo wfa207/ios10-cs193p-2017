@@ -64,7 +64,7 @@ class ViewController: UIViewController {
     @IBAction func touchDigit(_ sender: UIButton) {
         let digit = sender.currentTitle!
         
-        if digit == "." { return displayValueIsDecimal = true }
+        guard digit != "." else { return displayValueIsDecimal = true }
         
         if displayValueIsDecimal { displayDecimal += digit }
         else { displayInteger += digit }
