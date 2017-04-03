@@ -102,7 +102,7 @@ struct CalculatorModel {
             switch operation {
             case .constant(let constant):
                 accumulator = constant
-                description += "\(accumulator)"
+                description += "\(accumulator!)"
             case .unaryOperation(let fn, let position):
                 if accumulator != nil {
                     if calculationIsNew {
